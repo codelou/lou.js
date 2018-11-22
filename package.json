@@ -1,6 +1,6 @@
 {
-  "name": "xianxin-build",
-  "version": "0.0.3",
+  "name": "lou-build",
+  "version": "0.0.1",
   "description": "前端工程化构建",
   "license": "LGPL",
   "scripts": {
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git@github.com:sentsin/xianxin-build.git"
   },
-  "author": "贤心",
-  "homepage": "http://www.layui.com/",
+  "author": "codelou",
+  "homepage": "https://codelou.github.io/",
   "devDependencies": {
     "connect": "^3.6.2",
     "gulp": "^3.9.0",

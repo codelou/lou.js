@@ -1,9 +1,0 @@
-jsonp3({
-  "code": "1",
-  "data": {
-    "share_url": "http://m.fine3q.com/dev/scratch/index.html?order_id=1757053&share_user_id=75006",
-    "server_time": "2016-09-08T15:36:50",
-    "share_title": "我刚刚在剁手帮下了一单，邀请你跟我一起领红包～ "
-  },
-  "message": ""
-})

@@ -1,1 +1,0 @@
-/**/ typeof jsonp1 === 'function' && jsonp1({"code":"1","data":{"is_new":0,"is_vip":1,"has_authority_new":0,"server_time":"2016-01-15T10:32:28","user_id":220083},"message":""});

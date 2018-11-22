@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "louer",
   "version": "0.0.2",
   "description": "剁手帮各种活动页",
   "main": "index.js",
@@ -7,10 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "贤心 <xu@sentsin.com> ",
+  "author": "codelou ",
   "license": "MIT",
   "repository": {
     "type": "git"
-    ,"url": "http://git.duoshoubang.cn/fe/event.git"
+    ,"url": ""
   }
 }
