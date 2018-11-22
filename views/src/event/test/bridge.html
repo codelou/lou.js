@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" style="font-size: 100px;">
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Web And Native</title> 
+
+<meta name="renderer" content="webkit"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+
+<link href="http://cdn.firstlinkapp.com/res/duoui/css/duoui.css" rel="stylesheet">
+<style>
+.main{width: 3.75rem; margin: 0.1rem auto; font-size: 0.2rem; line-height: 0.4rem;}
+.main p{}
+.webNative{margin: 0 0.1rem;}
+
+/* 定义一个layer皮肤 */
+body .yours-skin{width: 70%; max-width: 90%; border-radius: 8px;}
+body .yours-skin  h3{border-bottom: none; color: #999; text-align: center; padding: 0 10px;}
+body .yours-skin .layermend{display: none;}
+body .yours-skin .layermbtn{border-top: none; webkit-box-sizing: content-box;}
+body .yours-skin .layermbtn span{color: #3796F0; border-radius: 0 8px 0 0;}
+body .yours-skin .layermcont{text-align: left;}
+body .yours-skin .layermbtn:before{display: none;}
+body .yours-skin .layermbtn span:first-child{border-radius: 0 0 0 8px;}
+</style>
+</head>
+<body>
+
+
+<div class="main">
+  <div class="webNative">
+    <p>
+      <a href="javascript:;" id="reload">刷新</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="open">启动剁手帮</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="share">分享</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="openWebview">打开一个新的WebView</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="Detail">跳到Detail页</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="userinfo">获取DUO_USER_INFO</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="clear">清楚cookie</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="login">登入</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="Agrent">获取userAgrent</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="appinfo">获取appinfo</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="device" data-locktime="3000">获取设备</a>
+    </p>
+    <p>
+      <a href="javascript:;" id="getWeixinUserInfo">微信当前微信基本用户信息</a>
+    </p>
+  </div>
+</div>
+
+<script src="http://cdn.firstlinkapp.com/res/duoui/lib/zepto.js"></script>
+<script src="http://cdn.firstlinkapp.com/res/duoui/lib/layer/layer.js"></script>
+<script src="http://cdn.firstlinkapp.com/res/duoui/lib/weixin1.0.js"></script>
+<!--<script src="http://10.1.0.141:8000/res/src/lib/duoui.js?12345678789"></script>-->
+<script src="http://cdn.firstlinkapp.com/res/duoui/lib/duoui.js?222222222"></script>
+<script>
+
+
+duoui.touch('#reload', function(){
+  location.reload();
+});
+
+duoui.touch('#open', function(){
+  location.href = 'firstlinkapp://index.fine3q.com';
+});
+
+var share = {
+  title: '再买就去剁手帮，我正在剁手帮玩转盘，剁手券都到我碗里来！'
+  ,desc: '想做一个任性的土豪，开心时，发优惠券，不开心，发个小点的优惠券'
+  ,imgUrl: 'http://cdn.firstlinkapp.com/upload/2016_3/1459336313647_88919.jpg'
+  ,link: 'http://10.1.0.40:8000/views/src/event/test/a.html?origin=1'
+  ,success: function(res){
+    duoui.shareEnd(res, function(res){
+      layer.msg(JSON.stringify(res))
+    });
+  }
+}
+duoui.touch('#share', function(){
+  duoui.share(share);
+});
+
+duoui.weixin({
+  share: share
+})
+
+
+duoui.touch('#openWebview', function(){
+  duo.openPageInNewWebView("http://m.fine3q.com");
+});
+duoui.touch('#Detail', function(){
+  duoui.openDetail({
+    id: 59215
+  });
+});
+
+
+var resize = function(){
+  var width = $(this).width();
+  if(width > 750){
+    width = 750;
+  } else if(width < 320){
+    width = 320;
+  }
+  $('html').css({
+    'font-size': width*100/375
+  })
+}
+resize();
+$(window).on('resize', resize);
+
+
+duoui.touch('#userinfo', function(){
+  layer.msg(duoui.cookie('dsb_user_info'));
+  //layer.msg(duoui.cookie('unionid'));
+});
+
+duoui.touch('#clear', function(){
+  duoui.cookie('dsb_user_info', null);
+});
+
+duoui.touch('#login', function(){
+  duoui.login(function(user){
+    alert(JSON.stringify(user));
+  });
+});
+
+duoui.touch('#appinfo', function(){
+  duo.ready(function(appinfo){
+    alert(JSON.stringify(appinfo));
+  });
+});
+
+duoui.touch('#Agrent', function(){
+  layer.msg(navigator.userAgent);
+});
+
+duoui.touch('body', '#device', function(){
+  console.log(123)
+  layer.msg(JSON.stringify(duoui.device()));
+});
+
+duoui.touch('#getWeixinUserInfo', function(){
+  var openid = duoui.cookie('openid');
+  alert(document.cookie);
+
+  //https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN
+});
+
+</script>
+
+<div style="display: none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257379234'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257379234' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/**
+ 迪斯尼活动 
+*/
+
+html {
+  font-size: 14px;
+}
+
+.duo-btn {
+  background-color: #FF6266;
+  border-radius: 3px;
+}
+
+.disney-html {
+  background: url(//cdn.firstlinkapp.com/upload/2016_3/1458611991127_48992.jpg) center top no-repeat #020814;
+  color: #F8F7F7;
+}
+
+.disney-logo {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  width: 150px;
+  margin-left: -75px;
+}
+
+.disney-erweima {
+  position: absolute;
+  left: 50%;
+  top: 180px;
+  width: 220px;
+  margin-left: -110px;
+}
+
+.disney-follow-cite {
+  position: absolute;
+  left: 50%;
+  top: 440px;
+  width: 220px;
+  margin-left: -110px;
+  line-height: 24px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.disney-follow-cite a {
+  display: block;
+  margin-top: 10px;
+  color: #fff
+}
+
+.disney-center {
+  text-align: center;
+}
+
+.duo-main .disney-jiantou {
+  position: absolute;
+  right: 30px;
+  bottom: 8px;
+  width: 70px;
+}
+
+.disney-share {
+  margin: 80px 30px 50px;
+  line-height: 30px;
+  color: #F66362;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.disney-share p {
+  position: relative;
+}
+
+.disney-share p:first-child {
+  margin-bottom: 20px;
+}
+
+.disney-share p cite {
+  font-weight: 400;
+}
+
+.duo-main .disney-home {
+  max-width: 80%;
+}
+
+.disney-mycode-html {
+  background-color: #020814;
+}
+
+.disney-mycode-html body {
+  position: relative;
+  top: -150px;
+}
+
+.disney-city {
+  position: relative;
+}
+
+.disney-main {
+  position: relative;
+  top: -70px;
+  margin: 0 30px;
+}
+
+.disney-getcode {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.disney-getcode div {
+  height: 180px;
+  line-height: 30px;
+  background: url(//cdn.firstlinkapp.com/upload/2016_3/1458642764726_54332.png) center center no-repeat;
+  text-align: center;
+  color: #9C9C9C;
+  font-size: 16px;
+}
+
+.disney-getcode p {
+  margin-bottom: 5px;
+}
+
+.disney-getcode p cite {
+  color: #FF6266;
+}
+
+.disney-mobile {
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.disney-button {
+  display: box;
+  display: -webkit-box;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.disney-button .duo-btn {
+  display: block;
+  padding: 0 10px;
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  font-size: 14px;
+}
+
+.disney-tips {
+  margin-top: 30px;
+  line-height: 22px;
+  color: #fff;
+  font-size: 12px;
+  padding-bottom: 15px;
+}
+
+.disney-codes {
+  margin-top: 20px;
+}
+
+.disney-codes li {
+  position: relative;
+  height: 60px;
+  padding: 20px 0 20px 75px;
+  border-bottom: 1px dashed #989898;
+  color: #ccc;
+}
+
+.disney-codes li img {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+}
+
+.disney-codes li p {
+  line-height: 30px;
+}
+
+.disney-codes li p span {
+  padding-left: 10px;
+}
+
+.disney-codes li p cite {
+  color: #fff;
+}
+
+.disney-enroll {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.disney-enroll input {
+  width: 230px;
+  padding: 0 10px;
+  height: 42px;
+  line-height: 42px;
+  border: none;
+  border-radius: 3px;
+}
+
+.disney-enroll p[tips] {
+  text-align: center;
+  line-height: 50px;
+  color: #798288;
+}
+
+.disney-enroll button {
+  width: 250px;
+}
+
+
+/* 弹出关注码 */
+
+body .layermbox1 .follow-gzh {
+  width: 260px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+.follow-gzh div[follow] h5 {
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 300;
+  background-color: #FF6266;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+}
+
+.follow-gzh div[follow] img {
+  width: 100px;
+}
+
+.follow-gzh div[follow] p {
+  text-align: center;
+}

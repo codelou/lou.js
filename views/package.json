@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "version": "0.0.2",
+  "description": "剁手帮各种活动页",
+  "main": "index.js",
+  "bin": { "duoms": "bin/run.js" },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "贤心 <xu@sentsin.com> ",
+  "license": "MIT",
+  "repository": {
+    "type": "git"
+    ,"url": "http://git.duoshoubang.cn/fe/event.git"
+  }
+}

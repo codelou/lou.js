@@ -1,0 +1,13 @@
+jsonp1({
+  "code": "1",
+  "data": {
+    "server_time": "2016-09-08T15:36:50",
+    "list": [],
+    "user": {
+      "id": 75006,
+      "nickname": "乐乐",
+      "head_pic": "http://cdn.firstlinkapp.com/real/i_pic/20150728/75006/79e5d1f5-4562-4977-b252-a849ac51f636.png"
+    }
+  },
+  "message": ""
+})

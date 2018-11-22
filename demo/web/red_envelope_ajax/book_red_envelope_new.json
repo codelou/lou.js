@@ -1,0 +1,13 @@
+jsonp4({
+  "code": "1",
+  "data": {
+    "red_envelope": {
+      "amount": 1200,
+      "id": 804006,
+      "receive_count": 0,
+      "share_flag": true,
+      "user_id": 75006
+    }
+  },
+  "message": ""
+})

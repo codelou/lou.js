@@ -1,0 +1,58 @@
+
+/**
+ 红包以及裂变 
+*/
+
+html{background-color: #f8f3e4;}
+body{margin-bottom: 100px;}
+.duo-scratch-header{position: relative; width: 100%; margin-bottom: 80px; background: url(http://cdn.firstlinkapp.com/upload/2016_7/1468219966854_11014.png); background-size: cover;}
+.duo-scratch-avatar{position: absolute; bottom: -65px; left: 0; width: 100%; text-align: center;}
+.duo-scratch-avatar img{width: 70px; height: 70px; border: 3px solid #fff; border-radius: 100%;}
+.duo-scratch-avatar p{line-height: 30px; color: #9d532c; font-size: 14px; font-weight: 700;}
+
+
+.duo-scratch-open{position: relative; width: 250px; height: 130px; margin: 0 auto; padding: 18px 15px 15px; background: url(http://cdn.firstlinkapp.com/upload/2016_7/1468219948636_20992.png); background-size: cover;}
+.duo-scratch-coupon{display: none; height: 250px; height: 130px;}
+.duo-scratch-open canvas{display: none; position: absolute; left: 15px; top: 18px;}
+.duo-scratch-coupon li{height: 130px; text-align: center; line-height: 20px; background: url(http://cdn.firstlinkapp.com/upload/2016_7/1468219978278_80519.png) #F9EBCF; background-size: cover;}
+.duo-scratch-coupon li h2{padding-top: 25px; color: #9D370B; font-size: 17px;}
+.duo-scratch-coupon li p{color: #9D370B;}
+.duo-scratch-coupon li p[desc]{font-size: 12px;}
+.duo-scratch-coupon li p[name]{font-size: 16px;}
+.duo-scratch-coupon li button{margin-top: 5px; height: 28px; line-height: 28px; width: 160px; padding: 0 10px; border-radius: 20px; border: none; background-color: #FF4B52; color: #fff; font-size: 14px;}
+.duo-scratch-coupon li[count] h2{padding-top: 35px;}
+.duo-scratch-coupon li[count] button{margin-top: 8px;}
+.duo-scratch-coupon li[get]{background: url(http://cdn.firstlinkapp.com/upload/2016_7/1468219981570_77333.png) #FBCF84; background-size: cover;}
+.duo-scratch-coupon li[get] h2{padding-top: 18px; font-size: 20px; line-height: 30px;}
+.duo-scratch-coupon li[get] cite{font-size: 30px;}
+
+.duo-scratch-list{margin: 30px 20px 0}
+.duo-scratch-list li{position: relative; padding: 0 80px 0 50px; border-top: 1px solid #eadeb8; font-size: 13px; color: #9d532c; height: 60px; line-height: 60px;}
+.duo-scratch-list li span{display: inline-block; padding-left: 10px; max-width: 65%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.duo-scratch-list li img{position: absolute; top: 5px; left: 0; width: 45px; height: 45px; border: 2px solid #fff; border-radius: 100%; vertical-align: middle;}
+.duo-scratch-list li cite{position: absolute; right: 0; top: 0;}
+
+.duo-scratch-footer{position: fixed; bottom: 0; left: 0; width: 100%; height: 70px; text-align: center; background: #F8F3E4; box-shadow: 0 -10px 30px rgba(248, 243, 228, 1);}
+.duo-scratch-footer a{position: absolute; bottom: 20px; left: 50%; line-height: 30px; width: 130px; margin-left: -65px; background-color: #f2ecda; border-radius: 30px; text-decoration: underline; font-size: 13px; color: #9d532c;}
+
+/* 关注 */
+.duo-scratch-follow{text-align: center;}
+.duo-scratch-follow p{line-height: 22px; color: #444; font-size: 14px;}
+.duo-scratch-follow a[button]{display: inline-block; width: 280px; height: 50px; margin-top: 50px; line-height: 50px; background-color: #ff4c4c; color: #fff; border-radius: 5px; font-size: 16px;}
+
+/* 下载bar */
+.duo-download-scratch{background-color: rgba(255,255,255,.85); color: #444;}
+.duo-download-scratch .down-btn{border-radius: 20px; border-color: #444; color: #444;}
+.duo-download-scratch .duo-close{background-color: #C9BDB3;}
+.duo-download-scratch .duo-close::after, 
+.duo-download-scratch .duo-close::before{background-color: #fff;}
+
+
+/* 分享引导 */
+.duo-scratch-share{color: #ccc; text-align: right;}
+.duo-scratch-share img{width: 60px;}
+.duo-scratch-share p{margin-top: 5px; line-height: 22px; font-size: 15px;}
+
+
+
+

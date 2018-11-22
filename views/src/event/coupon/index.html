@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="disney-mycode-html">
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>剁手帮</title> 
+
+<meta name="renderer" content="webkit"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+
+<link href="//static.fine3q.com/res/duoui/css/duoui.css?108" rel="stylesheet">
+<style>
+@-webkit-keyframes share{
+  0%{
+    -webkit-transform:rotateZ(0deg) translate3d(0px, 0, 0px) scale(1.2);
+    opacity: 0.5
+  }
+  100%{
+    -webkit-transform:rotateZ(-10deg) translate3d(2px, 2px, 0) scale(1);
+    opacity: 1
+  }
+}
+@keyframes share{
+  0%{
+    -webkit-transform:rotateZ(0deg) translate3d(0px, 0, 0px) scale(1.2);
+    opacity: 0.5
+  }
+  100%{
+    -webkit-transform:rotateZ(-10deg) translate3d(2px, 2px, 0) scale(1);
+    opacity: 1
+  }
+}
+
+html{background-color: #0D0511}
+.duo-main>div{position: relative;}
+.wheel-gettips{position: absolute; left: 50%; top: 50%; width: 270px; height: 44px; line-height: 36px; margin: -22px 0 0 -135px; text-align: center; background: url(//cdn.firstlinkapp.com/upload/2016_3/1459236427654_73206.png); background-size: cover; color: #fff; font-size: 14px;}
+.wheel-share{position: absolute; left: 50%; bottom: -4px; width: 270px; height: 60px; line-height: 40px; margin: 0 0 0 -135px; text-align: center; background: url(//cdn.firstlinkapp.com/upload/2016_3/1459237016178_2898.png); background-size: cover;}
+.wheel-share span{position: absolute; width: 100%; left: 0; top: -35px; text-align: center; color: #fff; font-size: 14px;}
+.wheel-share cite{position: absolute; right: -15px; bottom: 5px; width: 45px; height: 36px; background: url(//cdn.firstlinkapp.com/upload/2016_3/1459240271473_9787.png) no-repeat; background-size: cover;}
+.wheel-share cite{animation:share .8s infinite linear ; -webkit-animation:share .8s infinite linear ;}
+.wheel-main{position: absolute; left: 50%; bottom: 0; width: 240px; height: 240px; margin: 0 0 0 -120px; background: url(//cdn.firstlinkapp.com/upload/2016_6/1466158969949_12102.png) no-repeat; background-size: cover;}
+.wheel-pan{position: absolute; width: 240px; height: 240px; margin: 0; background: url(//cdn.firstlinkapp.com/upload/2016_6/1466159443147_7358.png) no-repeat; background-size: cover;}
+.wheel-pan{transition-timing-function: ease; -webkit-transition-timing-function: ease;}
+
+.wheel-zhizhen{position: absolute; left: 50%; top: 50%; width: 80px; height: 90px; margin: -40px 0 0 -40px; background: url(//cdn.firstlinkapp.com/upload/2016_3/1459240255801_59729.png) no-repeat; background-size: cover;}
+.wheel-gongxi{background-image: url(//cdn.firstlinkapp.com/upload/2016_3/1459240261626_31730.png);}
+.wheel-xiexie{background-image: url(//cdn.firstlinkapp.com/upload/2016_3/1459240265707_92574.png);}
+#duoLoading{display: none;}
+.wheel-down{position: absolute; top: 0; left: 0; z-index: 100; width: 100%; background-color: rgba(0,0,0,.3);}
+.wheel-down .duo-close::before, .wheel-down .duo-close::after{background-color: #000;}
+</style>
+</head>
+<body>
+
+<section class="duo-main" id="duoLoading">
+  <div>
+    <img src="//cdn.firstlinkapp.com/upload/2016_3/1459235866454_74737.jpg">
+  </div>
+  <div>
+    <img src="//cdn.firstlinkapp.com/upload/2016_3/1459235912846_35753.jpg">
+    <div class="wheel-gettips">
+      <!--您今日还剩<cite id="wheel-count" style="padding:0 5px;">0</cite>次抽奖机会哟-->
+      活动已结束，请等待下次开启
+    </div>
+  </div>
+  <div>
+    <img src="//cdn.firstlinkapp.com/upload/2016_3/1459235918427_44784.jpg">
+    <div class="wheel-main">
+      <div class="wheel-pan">
+
+      </div>
+      <div class="wheel-zhizhen" lay-touch="chou"></div>
+    </div>
+  </div>
+  <div>
+    <img src="//cdn.firstlinkapp.com/upload/2016_6/1466158066692_43200.jpg">
+     <!--<div class="wheel-share" lay-touch="share">
+      <cite></cite>
+    </div>-->
+  </div>
+  <div><img src="//cdn.firstlinkapp.com/upload/2016_6/1466304735043_36967.jpg"></div>
+  <div><img src="//cdn.firstlinkapp.com/upload/2016_6/1466152309644_81289.jpg"></div>
+  <div><img src="//cdn.firstlinkapp.com/upload/2016_6/1466152313033_79193.jpg"></div>
+  <div><img src="//cdn.firstlinkapp.com/upload/2016_6/1466152315719_74231.jpg"></div>
+</section>
+
+<script src="//static.fine3q.com/res/duoui/lib/all/duoui.js?v=108" merge="true"></script>
+<script src="//static.fine3q.com/res/duoui/lib/mod/wheel.js?108"></script>
+
+<div style="display: none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257379234'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257379234' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</body>
+</html>

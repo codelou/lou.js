@@ -1,0 +1,889 @@
+/** Style For DuoUI  By 贤心 */
+
+
+/* reset */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+form,
+legend {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+html {
+  font: 12px 'Helvetica Neue', 'PingFang SC', STHeitiSC-Light, Helvetica, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+  background: transparent
+}
+
+a:active,
+a:hover {
+  outline: 0
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+li {
+  list-style: none;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+
+dfn {
+  font-style: italic
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+img {
+  border: 0;
+  vertical-align: bottom
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+}
+
+button,
+select {
+  text-transform: none
+}
+
+select {
+  -webkit-appearance: none;
+  border: none;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+
+label,
+input {
+  vertical-align: middle;
+}
+
+
+/* 结构 */
+
+.duo-main {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.duo-main img {
+  max-width: 100%;
+}
+
+
+/* 按钮 */
+
+.duo-btn {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  border: none;
+  background-color: #D51B25;
+  color: #fff;
+  font-size: 16px;
+}
+
+.duo-close {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.duo-close::before,
+.duo-close::after {
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 13px;
+  height: 1px;
+  background-color: #333;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  content: '';
+}
+
+.duo-close::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.duo-close:active {
+  opacity: 0.9;
+}
+
+
+/* Download App */
+
+.download-app {
+  position: relative;
+  height: 60px;
+  font-size: 14px;
+  background-color: #333;
+  color: #fff;
+}
+
+.app-logo {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  background: url(//cdn.firstlinkapp.com/static/img/logo_fillet.png) no-repeat;
+  background-size: cover;
+}
+
+.app-himai .app-logo {
+  background: url(//cdn.firstlinkapp.com/upload/2016_11/1478486640353_31314.png) no-repeat;
+  background-size: contain;
+}
+
+.app-desc {
+  position: absolute;
+  left: 60px;
+  top: 10px;
+  line-height: 20px;
+}
+
+.app-desc h2 {
+  font-size: 14px;
+}
+
+.down-btn {
+  position: absolute;
+  right: 40px;
+  top: 16px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.down-close {
+  right: 8px;
+  top: 20px;
+}
+
+
+/* 右下角Bar */
+
+.duo-fixedbar {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  z-index: 9999999999;
+  pointer-events: auto;
+}
+
+.duo-fixedbar li,
+.duo-fixedbar li img {
+  width: 50px;
+  height: 50px;
+}
+
+.duo-fixedbar li {
+  margin-top: 10px;
+}
+
+
+/* 验证码 */
+
+body .layermbox1 .duo-vercode {
+  border-radius: 3px;
+}
+
+body .duo-vercode .layermcont {
+  padding: 15px;
+}
+
+.duo-vercode .vercode-line {
+  position: relative;
+  margin-bottom: 10px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #D3D6D8;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.duo-vercode .vercode-line label {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  height: 40px;
+  border-left: 1px solid #D3D6D8;
+  padding: 0 10px;
+  background-color: #E5E5E5;
+  font-size: 12px;
+  color: #333;
+}
+
+.duo-vercode .vercode-line label em {
+  color: #FF7A4B;
+}
+
+.duo-vercode .vercode-line input {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  z-index: 1;
+  width: 150px;
+  height: 38px;
+  margin-left: 10px;
+  border: none;
+  text-align: left;
+  background: #fff;
+  font-size: 14px;
+}
+
+.duo-vercode .vercode-line #vercode-code {
+  width: 95%;
+}
+
+.duo-vercode .duo-btn {
+  display: block;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  border: none;
+  text-align: center;
+  background-color: #f85a5a;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.duo-vercode button.disable {
+  background-color: #ccc;
+}
+
+body .duo-vercode .layermend {
+  display: none;
+}
+
+
+/* 辅助 */
+
+.duo-rowmore {
+  display: box;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+}
+
+.duo-weixinHere {
+  width: 160px;
+  height: 50px;
+  background: url(//cdn.firstlinkapp.com/upload/2016_3/1458806549313_95695.png) no-repeat;
+  background-size: cover;
+}
+
+.duo-center {
+  display: box;
+  display: -webkit-box;
+  box-pack: center;
+  -webkit-box-pack: center;
+  box-align: center;
+  -webkit-box-align: center;
+  text-align: center;
+}
+
+
+/* 商品多列列表 */
+
+.duo-goodslist {
+  background-color: #f4f4f4;
+}
+
+.duo-goodslist ul {
+  padding: 10px 5px 0 5px;
+}
+
+.duo-goodslist ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+.duo-goodslist .duo-center {
+  position: relative;
+}
+
+.duo-goodslist .duo-content li a {
+  position: relative;
+  display: block;
+  margin: 0 5px 10px 5px;
+  padding-bottom: 5px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.duo-goodslist .duo-content li img {
+  max-height: 100%;
+  border-radius: 3px 3px 0 0;
+}
+
+.duo-goodslist .duo-content li[none] {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  color: #ccc;
+  font-size: 14px;
+  text-align: center;
+  background: #fff;
+}
+
+.duo-goodslist .duo-content h2 {
+  height: 32px;
+  line-height: 16px;
+  font-size: 12px;
+  margin: 5px 8px;
+  overflow: hidden;
+  font-weight: 400;
+  color: #333;
+}
+
+.duo-goodslist .duo-content p {
+  margin: 5px 8px;
+  font-size: 12px;
+}
+
+.duo-goodslist .duo-content p[price] {
+  font-size: 14px;
+  font-weight: bold;
+  color: #363636;
+  margin-bottom: 5px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.duo-goodslist .duo-content p[source] {
+  padding-left: 20px;
+  height: 18px;
+  line-height: 18px;
+  color: #959595;
+  background: url(//cdn.firstlinkapp.com/static/mobile/product/img/origin_ico_af4f53f.jpg) no-repeat center left;
+  background-size: 15px;
+}
+
+.duo-goodslist ul li .duo-nodata {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  line-height: 22px;
+  margin: -11px 0 0 -30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.duo-goodslist[data-style="single"] {
+  background-color: #fff;
+}
+
+.duo-goodslist[data-style="single"] ul li {
+  width: 33.3%;
+}
+
+.duo-goodslist[data-style="single"] .duo-content h2 {
+  margin: 5px 5px 0;
+  height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #999;
+  font-size: 12px;
+}
+
+.duo-goodslist[data-style="single"] .duo-content p[price] {
+  text-align: center;
+  font-size: 12px;
+}
+
+.duo-goodslist[data-style="single"] .duo-content p[source] {
+  display: none
+}
+
+
+/* 动画 */
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.duo-refresh {
+  position: absolute;
+  z-index: 99999999999999999;
+  left: 50%;
+  top: -35px;
+  margin-left: -15px;
+  width: 30px;
+  height: 30px;
+  background: url(//cdn.firstlinkapp.com/res/duoui/images/refresh.png) no-repeat;
+  background-size: cover;
+  color: #ccc;
+}
+
+.duo-infinite {
+  animation: rotate 0.5s infinite linear;
+  -webkit-animation: rotate 0.5s infinite linear;
+}
+
+
+/* layer mobile */
+
+.layermbox {
+  position: relative;
+  z-index: 19891014
+}
+
+.layermmain,
+.laymshade {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+
+.layermbtn span,
+.layermchild {
+  display: inline-block;
+  position: relative
+}
+
+.laymshade {
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: auto
+}
+
+.layermmain {
+  display: table;
+  font-family: Helvetica, arial, sans-serif;
+  pointer-events: none
+}
+
+.layermmain .section {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center
+}
+
+.layermchild {
+  text-align: left;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+  pointer-events: auto;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: .18s;
+  animation-duration: .18s
+}
+
+.layermborder {
+  border: 1px solid #999
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.5);
+    transform: scale(.5)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+.layermanim {
+  animation-name: bounceIn;
+  -webkit-animation-name: bounceIn
+}
+
+.layermbox0 .layermchild {
+  max-width: 90%;
+  min-width: 150px
+}
+
+.layermbox1 .layermchild {
+  border: none;
+  border-radius: 0
+}
+
+.layermbox2 .layermchild {
+  width: auto;
+  max-width: 260px;
+  min-width: 40px;
+  border: none;
+  background: 0 0;
+  box-shadow: none;
+  color: #fff
+}
+
+.layermchild h3 {
+  padding: 0 45px 0 10px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 1px solid #EBEBEB
+}
+
+.layermbtn span,
+.layermchild h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap
+}
+
+.layermcont {
+  padding: 20px 15px;
+  line-height: 22px;
+  text-align: center
+}
+
+.layermbox1 .layermcont {
+  padding: 0;
+  text-align: left
+}
+
+.layermbox2 .layermcont {
+  text-align: center;
+  padding: 0;
+  line-height: 0
+}
+
+.layermbox2 .layermcont i {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+@-webkit-keyframes bouncedelay {
+  0%,
+  100%,
+  80% {
+    transform: scale(0);
+    -webkit-transform: scale(0)
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes bouncedelay {
+  0%,
+  100%,
+  80% {
+    transform: scale(0);
+    -webkit-transform: scale(0)
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1)
+  }
+}
+
+.layermbox2 .layermcont i:first-child {
+  margin-left: 0;
+  -webkit-animation-delay: -.32s;
+  animation-delay: -.32s
+}
+
+.layermbox2 .layermcont i.laymloadtwo {
+  -webkit-animation-delay: -.16s;
+  animation-delay: -.16s
+}
+
+.layermbox2 .layermcont>div {
+  line-height: 22px;
+  padding-top: 7px;
+  margin-bottom: 20px;
+  font-size: 14px
+}
+
+.layermbtn {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  font-size: 0;
+  text-align: center;
+  border-top: 1px solid #EBEBEB
+}
+
+.layermbtn span {
+  width: 50%;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 0 3px 0 0
+}
+
+.layermbtn span:first-child {
+  height: 39px;
+  background-color: #fff;
+  border-radius: 0 0 0 3px
+}
+
+.layermbtn:before {
+  content: '\20';
+  position: absolute;
+  width: 1px;
+  height: 39px;
+  left: 50%;
+  top: 0;
+  background-color: #EBEBEB
+}
+
+.layermend {
+  position: absolute;
+  right: 7px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  font-weight: 400;
+  background: 0 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  font-size: 30px
+}
+
+.layermend::after,
+.layermend::before {
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  content: '';
+  width: 18px;
+  height: 1px;
+  background-color: #999;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border-radius: 3px
+}
+
+.layermend::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg)
+}
+
+
+/* 页面底部固定导航条 */
+
+#nav-toolbar {
+  height: 52px;
+  margin: 10px auto 0;
+}
+
+#nav-toolbar .fixed-box {
+  width: 100%;
+  height: 52px;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  background-color: #fff;
+}
+
+#nav-toolbar .nav-item {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+}
+
+#nav-toolbar .nav-item .link-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+#nav-toolbar .item-home .link-icon {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC80lEQVR42uyaSWhTURSGX+pUHBpsi4otVcQJFxZRCmJonYKKooILsaBUxCqKoiKNirrQigYRF1LEqYs6IA4UXWhxqCModaN0q4LiBIUKirQ4EL9L/kIIJM308hJ4B74mr2+6/7vnnHvuffGEQiErn22g+RMMBvOy8YFAwCqw8tzsFFAKHfAKxtrqQjZYOdyHqdo2IlbBy6jjRsHwiO1e+OJ0D0yG52r8TbikHngM6yOOq4TP8C4Cs73cSQEz4CmMg/OwGtbCPhgMzXBSPV+uz2/wAN7qGmVOCaiGRzAajkM9/NO+o3KhX7AD2qBE+9rBDxecDOKlcBeKYA80QPQA0wo++AQL4EyuZKFaNW4IbDbDSpxjX0OVslNhLgjYAhf1tI2Qswmc8xXmwlVt18BEJwTshyboUea4lsS5PRLcpKB9AlOyNQ544ATshO/y/xcpXMf02jb4rWvVZUPAAKXHOrnCIuhMoxeNiF3wR4FvbJBdLmSC9IYa/14ZpTNDWSwAR/T9gMaTjAoYAXdgpRrtk4hMmompg6qhHsLMTAko0Ug5X75eI/exww7DXhgpEbPTFVCm0qBKxZlfgWunHYPd4NWI7UtVwCQVZdPgOixTKZANM1luu1y3Tb2elIBKPfnxcA7WKN1l007BVhiq+FuYqIA5Kn3HqCzYFFGUZdtOw0aVHbdhcX8ClsA9+V+DAsqcVOxA44vVnmbNI0w5fkuuHFPAZeX7epXE1eq+RgcENOrepg0tsE4DaUu8kXgD/FAKsyKme14HBHij2nBFkx9vPAGtOb4I0Z7NVYm8X1ZxBbgCUjBTTXZBdwy6dEzOCvCrHC6Ica9SHZMxs2tpcTp8jPpfBXxwY8AV4ApwBbgCXAGugCQE9Do4IyuKakNKpYR5u9i3Am2mc/2tC/W9Tn0Gf2Pca5YVfqEXz4ZZ4VdV5t4d6Qgw8+N5cMgKr5BNSPDpVcTZV5jAdbq1jGIWen+mW8y9gRVuENtknnz/tUre98B/AQYAdoKXFkOsMNEAAAAASUVORK5CYII=) no-repeat 50%;
+  background-size: 24px 24px;
+  padding-bottom: 3px;
+}
+
+#nav-toolbar .nav-item .link-text {
+  color: #333;
+  font-size: 12px;
+}
+
+#nav-toolbar .item-catalog .link-icon {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAQAAAD/5HvMAAADPElEQVR4Ae2YA5AsVxSG79q2rcKLbdtJIbZtl4IvTgqxHkpberaRF9u2tfbebE7d9Y66bs+q/78493xn/lH3OaM8hVGePHnyRDS7cjZ3AHAHZ7Mr0ZMVJZbTWEQLeoxbWMRpxIb7fbmM79F+/AOXh+29YkfeRQ/5KxqBWwYMjXw14uRddgxHnAvpQIt/5W5qxp3XcDe/mooOLnA7zh1ocRu3kuCzKoFbaDWVdwRqGcEFPM0zAfw0FxAxjr0eLX6HmoDRa3jHVN/gv/BsdJA+cwx5BH3y+GqSVRAimdVS388R/sqODTrQ0aO4LH6TRzeTqIIUiWwU5jey/JXtw8VBeM8x1HPS+idyVQgil5+Ee07ZFTX0SuNjQyaPEa6XWruBnpa2Kx2xy4V92macBJqk6X6O6P2EbSJB2ZL5IXzimP/YfNy2xCPSEMc8wj9iL9A6J69w3Du8zl6g76RhtWO+Svgf7AVqloYpjvkU4VvsBdL/23oH5+JfaZjmmE8VvsleoG+kYYNjvl74b+wFWiENT3bMnyz8CnuB7pOGTzjmnxD+XnuBDjWDe6QjOtIsBIda3DLMLHSMI/oYMxPFKHviQWn6ChEhkxG8IuzDyqYopFPanhsyeY5wnRT6KojiUhnyA/sh6sbdIP+lMqQ4leYaho0hX/PtCC7JLIHvkxN0nGzeN8tksu+i40II9O4ocle6zBKUH1ScfLMIdbGr/8L9uTgon036GPIMM1l/F3h2ZF8zI/RzhnJPnE2PPE0fT/l+n8jjKbPD9XC2clccyZ9Dm/tLHEzcqNM4Dualoe3/T45U7otSlqKH3MZrLOCpAS/gNdpGnCylVIVLHMuraD9+lWNVuMVuPMFn46J8xhPsriZP5HAgZ3HpgM/iQHLUVBZJxEydMBE8Tx//cMpUCXQMWtxE/tQIdA7aeP7UCJQ5dAHtZ7+pEekytPE7RE2FQFG8jTa+TE0FsSf9JtDfU+QKxcto4+emRqB8mkygPnadGpGuRRtvJ3Lir9qVPOOKH2OHCXe6Dyb+59uI89Au2cdfUhwkZ76WKE5xMdC7akLxvJnEMyc+PpiLXfF55Pi80R7PBWQpJ/LkyZMnT57+AxeBT8TxAPc1AAAAAElFTkSuQmCC) no-repeat 50%;
+  background-size: 24px 24px;
+}
+
+#nav-toolbar .item-cart .link-icon {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAABmFBMVEUAAAD///////+qqqq/v7+ZmZmqqqqfn5+Ojo6ZmZmIiIiPj4+WlpaOjo6UlJSMjIyLi4uQkJCKioqPj4+JiYmMjIyPj4+KioqOjo6MjIyMjIyIiIiIiIiLi4uKioqNjY2KioqMjIyJiYmMjIyJiYmKioqMjIyKioqJiYmKioqKioqKioqJiYmLi4uJiYmLi4uJiYmKioqKioqKioqIiIiKioqJiYmJiYmKioqIiIiKioqJiYmIiIiJiYmIiIiJiYmKioqJiYmJiYmJiYmIiIiIiIiJiYmJiYmJiYmJiYmIiIiIiIiJiYmIiIiJiYmJiYmJiYmIiIiIiIiJiYmIiIiJiYmJiYmJiYmJiYmIiIiIiIiIiIiJiYmJiYmIiIiJiYmIiIiIiIiJiYmIiIiJiYmIiIiJiYmJiYmIiIiJiYmJiYmIiIiJiYmIiIiIiIiIiIiJiYmIiIiJiYmIiIiJiYmJiYmIiIiIiIiJiYmIiIiJiYmIiIiJiYmIiIiIiIiJiYmIiIiJiYmIiIiJiYmIiIiIiIiJiYmIiIiyYj/rAAAAh3RSTlMAAQIDBAUGCAkKDxAREhMUFhcYGRwfICMkKCorLS4wMTIzNDU2Oz4/QUZKTE5PUFFSU1VZWl5fY2Zna25yc3Z3enuAgoOFiIqMjZKUlZaZmpydn6ChoqepqrCytLa6u7y/w8TIycrLzdLT1tfY2dvd3t/g4eLl5ujp7u/x8vP19vf4+fr7/f5nWxgLAAABuUlEQVQYGd3B/18LcRwH8NcuS+TYJiGGEGvDNNJYWTLmS/kShtBJ8yUuLCZstma617/tcZ152O79me43D88n/kWRiYbTWJeLbChgXXYN/pJnCJ5kGIcnUWbhiW7NwRuzuj3Q3iY0mebfDKBJkubDNub5Es32Moc2rnMYzbTyEtQ2f1vuRAuDISiNcgKtMoxDRXv/PYhWUWahcoL34KJbc1B5yn64mVU/ZGE+g2CahyC7zQQESaYg2rbycQMEYeYgusA0JFq5AIm/WNUhMhiC4BRvQJZhHIJ57oEsyizcDnMWCrpVuOb2gjGomJS81aByhyMH3XZA6SxT8CTMHDzRygV4Y3Cgr8VOH5T23a/TrTx7ALJjFS7OLJKvbzU8J5dmXlk/kpAES5UEgETlSxCOrner53xA5HOtD4LLTMGW4iU4krwK23HehcDgVth0PoHjJvfD5iu9gSBf74TNX8/D8YC9WPNhGYIpHoXtCKfgSHMYtl4+hiBiLWwB0L3ACBy7a596AHQZPAPJJIvjQ+NFTqLhPL9mhsZMPoKoI10jWUt34LeREsnVKxuhEIiNxQL4U/fg6Mke/Fd+ApDhpNCSi246AAAAAElFTkSuQmCC) no-repeat 50%;
+  background-size: 24px 24px;
+}
+
+#nav-toolbar .item-profile .link-icon {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADRklEQVR42uyafWhNYRzHz71tIjbxB1qzP5CxDG2ryUvSln+YvBMiVyjMy19XQ3n7wy1kSWTZZZmXKcq8hE3GkuR1CVFMeX9t3rns+P7yvXVbm3vvuc95zl32rU/n3s7z/J7f95znPOd5nntdpmkarVluo5WrzYDTSmjphM/ni8uEvV5vZAZiUEcwBYwBWaA7+AmegXvgFDgCvsRbF5JYy0A98IPh4DY/l4OHYAS/17Os27YuFKW68KrmgUtgA6gGjU3KuUA+WAW2gQIwFbx38g4kgfO8ukvASHCumeRFJs+NAotYp5oxHDEgV7QUZILJYAeTDCcpsxNMYt1SxtJuYC4TXwkqLdQ/wboSw6PbQDv29WtgawxxtjDGesbUZmACSAEbW+jvkcpkjBTG1GrgLTipYCCQGG90GxgKLoBfCgxIjBowTJeBDqAn36yqJLFSGdt2A8Fx+4NCA8FYyToM/OCxvUIDwVjfdRhoAN9AmkIDaYzZoOshvgGGKDSQC27qHIXOgkGgt4Lke4HB4IxOA/tAACxXYGAF+A326zTwBOwBCzkhsyqpuwAcBI90T+bWgY/gEOhsob7UOQA+cVKnfTb6CswAfTiv7xFF3W6gCvQFc8BzJwwksAvIVCAb1IFpYeb2bq7CZMTJYd1+IFG3gRyueTeDi0z8BbvTHXYvWWJmEPm8FtwFhzkRnA6uMsYtxtSyJp4NdnMtW8CFiegYmAUWgzXN3AmT7w8PR5wAzYwDu0AtH+gyOw0UgmJwGUwEr0POBbjr4Gcfz+bRYLnrTcoHdRxcAUfBXj7c2+0wMJPJ13Df5+s/ykqip6OILeVH824W8+6Wq3wGBoIS9tlwyVuVxBzLNkr4dlZiIJF99jNXTXYkH2piPNsqC7dOjtTAUg6XhRxp7NZLtpXJtmMy0AkU8aGtMPSpgm0WMQfLBuaBrmB1hJtWqiRtyVa0bFvOj9XAfS7gdauWL0uPVQPp7Id+zVc/VDJ4DGAuURvI47HScE5VPOZbMSBLxneKt0+iVR13LHKtGOjPiZmTaqSJDCsGZPPqseG8JIdUK3OhJE4hNjlsQHJItmLgqfH3h7qsOLgLD6wYSDfiXK62/0q0GfjPDfwRYACyurmZIBbIGgAAAABJRU5ErkJggg==) no-repeat 50%;
+  background-size: 24px 24px;
+}
+
+#nav-toolbar a {
+  display: block !important;
+}
+#nav-toolbar a .link-icon {
+  margin: 0 auto !important;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
